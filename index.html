@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LayTech Editor</title>
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+		<h1>LayTech Editor</h1>
+    <p>Welcome to Laytech Text Editor. Start typing in the box below to see difficult terminology converted to easier english.</p>
+		<textarea class="form-control" rows="10" onkeyup="parse()" id="text"></textarea>
+		<br>
+		<p id="demo"></p>
+    <input type="text" id="search"></input> 
+    <button class="btn btn-primary" id="api" onclick="apiCall()">Search</button>
+    <button class="btn btn-primary" id="test" onclick="testCSV()">Test</button>
+	</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script>
+  /*(function (){
+    var uid = "4373";
+    var tokenid = "S18j5J0VQ5rKxiv0";
+
+    //var apiKeyMedDict = "aeee5df0-8558-4f8d-8d5d-83d30f069852";
+    var term = "asap";//document.getElementById("search");
+    var url = "http://www.stands4.com/services/v2/abbr.php?uid=" + uid + "&tokenid=" + tokenid + "&term="+term;
+    //var url = "http://www.dictionaryapi.com/api/v1/references/medical/xml/"+ query.value +"?key="+apiKeyMedDict;
+    /*$.get(url).done(function (data) {
+        console.log(data);
+    });
+
+    $.ajax({
+      url: url,
+      contentType: "application/x-www-form-urlencoded",
+      type: 'GET',
+      success: function(data){
+        console.log(data);
+      }
+    });
+  })();*/
+  </script>
+	<script src="app.js"></script>
+  <script src="jquery.csv-0.71.js"></script>
+  </body>
+</html>
